@@ -5,7 +5,7 @@ let db = null;
 async function connectDatabase() {
   try {
     const client = new MongoClient('mongodb+srv://grupo15:grupo15@proyectodb2.skqlwup.mongodb.net/?retryWrites=true&w=majority', {
-      useUnifiedTopology: true,
+      useNewUrlParser: true
     });
     await client.connect();
     db = client.db('mi_base_de_datos');
